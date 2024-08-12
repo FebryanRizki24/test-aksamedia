@@ -2,7 +2,7 @@
     "version": 2,
     "functions": {
         "api/index.php": {
-            "runtime": "vercel-php@0.5.2"
+            "runtime": "vercel-php@0.6.0"
         }
     },
     "routes": [
@@ -27,8 +27,7 @@
         "VIEW_COMPILED_PATH": "/tmp",
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie",
-        "PHP_VERSION": "7.3"
+        "SESSION_DRIVER": "cookie"
     },
     "outputDirectory": "public"
 }
