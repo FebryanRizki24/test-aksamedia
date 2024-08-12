@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "a2f8b01f-0912-4f15-8b91-78db06994b74",
+		"name": "test-aksamedia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33100308"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "pastibisa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyMzQzOTQzMSwiZXhwIjoxNzIzNDQzMDMxLCJuYmYiOjE3MjM0Mzk0MzEsImp0aSI6IkdnNmZ3bHl6T2tkV2taemQiLCJzdWIiOiJhNTU1YjZiNy1lYjMyLTRjYWEtYmJiZS00ZjllNjE4ZDZmNTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.HbPSYdOGslYYwxG962L0zDIa9LzT9nQ35_drzH3DZhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Divisions",
+			"item": [
+				{
+					"name": "Get Divisions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyMzQzOTQzMSwiZXhwIjoxNzIzNDQzMDMxLCJuYmYiOjE3MjM0Mzk0MzEsImp0aSI6IkdnNmZ3bHl6T2tkV2taemQiLCJzdWIiOiJhNTU1YjZiNy1lYjMyLTRjYWEtYmJiZS00ZjllNjE4ZDZmNTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.HbPSYdOGslYYwxG962L0zDIa9LzT9nQ35_drzH3DZhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"bp\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/divisions",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"divisions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employees",
+			"item": [
+				{
+					"name": "Get Employees",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyMzQzOTQzMSwiZXhwIjoxNzIzNDQzMDMxLCJuYmYiOjE3MjM0Mzk0MzEsImp0aSI6IkdnNmZ3bHl6T2tkV2taemQiLCJzdWIiOiJhNTU1YjZiNy1lYjMyLTRjYWEtYmJiZS00ZjllNjE4ZDZmNTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.HbPSYdOGslYYwxG962L0zDIa9LzT9nQ35_drzH3DZhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Raf\"\r\n    // \"division_id\" : \"ff99de74-b4a5-4c7b-ba3a-cb80e75c9780\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/employees",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Employees",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyMzQzOTQzMSwiZXhwIjoxNzIzNDQzMDMxLCJuYmYiOjE3MjM0Mzk0MzEsImp0aSI6IkdnNmZ3bHl6T2tkV2taemQiLCJzdWIiOiJhNTU1YjZiNy1lYjMyLTRjYWEtYmJiZS00ZjllNjE4ZDZmNTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.HbPSYdOGslYYwxG962L0zDIa9LzT9nQ35_drzH3DZhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "randi",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "082917361726",
+									"type": "text"
+								},
+								{
+									"key": "division_id",
+									"value": "e55e1f30-c30e-4fb7-8f72-e5d5ae22f7fc",
+									"type": "text"
+								},
+								{
+									"key": "position",
+									"value": "magang",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1ef58596-064f-4f20-ae80-aadc43d692e1"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/employees",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employees",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyMzQzOTQzMSwiZXhwIjoxNzIzNDQzMDMxLCJuYmYiOjE3MjM0Mzk0MzEsImp0aSI6IkdnNmZ3bHl6T2tkV2taemQiLCJzdWIiOiJhNTU1YjZiNy1lYjMyLTRjYWEtYmJiZS00ZjllNjE4ZDZmNTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.HbPSYdOGslYYwxG962L0zDIa9LzT9nQ35_drzH3DZhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Ratih fatika",
+									"contentType": "multipart/form-data",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "083141729832",
+									"contentType": "multipart/form-data",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"contentType": "multipart/form-data",
+									"type": "file",
+									"src": "postman-cloud:///1ef585f8-90d6-4ab0-8a4d-74ea14086238"
+								},
+								{
+									"key": "position",
+									"value": "pegawai honorer",
+									"contentType": "multipart/form-data",
+									"type": "text"
+								},
+								{
+									"key": "division_id",
+									"value": "e55e1f30-c30e-4fb7-8f72-e5d5ae22f7fc",
+									"contentType": "multipart/form-data",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/employees/c1816cfe-bc57-448a-ac26-3edf04050ee9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"employees",
+								"c1816cfe-bc57-448a-ac26-3edf04050ee9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employees",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTcyMzQzOTQzMSwiZXhwIjoxNzIzNDQzMDMxLCJuYmYiOjE3MjM0Mzk0MzEsImp0aSI6IkdnNmZ3bHl6T2tkV2taemQiLCJzdWIiOiJhNTU1YjZiNy1lYjMyLTRjYWEtYmJiZS00ZjllNjE4ZDZmNTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.HbPSYdOGslYYwxG962L0zDIa9LzT9nQ35_drzH3DZhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/employees/d09c0f27-e40e-4013-8d22-dde07db9fe76",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"employees",
+								"d09c0f27-e40e-4013-8d22-dde07db9fe76"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
